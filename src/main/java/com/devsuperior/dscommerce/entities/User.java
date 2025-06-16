@@ -18,8 +18,6 @@ public class User implements UserDetails {
 
     @Column(unique = true)
     private String email;
-    private String phone;
-    private LocalDate birthDate;
     private String password;
 
     @ManyToMany
@@ -28,9 +26,6 @@ public class User implements UserDetails {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
 
-    @OneToMany(mappedBy = "client")
-    private List<Order> orders = new ArrayList<>();
-
     public User() {
     }
 
@@ -38,8 +33,6 @@ public class User implements UserDetails {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.phone = phone;
-        this.birthDate = birthDate;
         this.password = password;
     }
 
@@ -67,47 +60,18 @@ public class User implements UserDetails {
         this.email = email;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
-    }
-
-    public void addRole(Role role){
-        roles.add(role);   }
-
-    public boolean hasRole(String roleName){
-        for (Role role: roles){
-            if (role.getAuthority().equals(roleName)){
-                return true;
-            }
-        }
-        return false;
-    }
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return roles;
     }
 
-    @Override
     public String getPassword() {
         return password;
     }
 
     @Override
     public String getUsername() {
-        return "";
+        return email;
     }
 
     @Override
@@ -117,13 +81,11 @@ public class User implements UserDetails {
 
     @Override
     public boolean isAccountNonLocked() {
-        return true;
-    }
+        return true;    }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return true;
-    }
+        return true;    }
 
     @Override
     public boolean isEnabled() {
@@ -134,9 +96,19 @@ public class User implements UserDetails {
         this.password = password;
     }
 
-    public List<Order> getOrders() {
-        return orders;
+    public void addRole (Role role){
+        roles.add(role);
     }
+
+    public boolean hasRole(String roleName){
+        for (Role role: roles){
+            if (role.getAuthority().equals(roleName)){
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     @Override
     public boolean equals(Object o) {
