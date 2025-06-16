@@ -33,7 +33,7 @@ public class OrderService {
 
     @Transactional(readOnly = true)
     public OrderDTO findById(Long id) {
-        
+
             Order order = orderRepository.findById(id).orElseThrow(
                     () -> new ResourceNotFoundException("Recurso não encontrado"));
             authService.validateSelfUser(order.getClient().getId());
