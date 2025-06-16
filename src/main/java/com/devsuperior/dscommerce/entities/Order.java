@@ -86,6 +86,7 @@ public class Order {
         return items;
     }
 
+
     public List<Product> getProducts() {
         return items.stream().map(x -> x.getProduct()).toList();
     }
