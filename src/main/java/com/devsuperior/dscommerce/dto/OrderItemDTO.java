@@ -1,7 +1,6 @@
 package com.devsuperior.dscommerce.dto;
 
 import com.devsuperior.dscommerce.entities.OrderItem;
-import com.devsuperior.dscommerce.entities.Product;
 
 public class OrderItemDTO {
     private Long productId;
@@ -9,6 +8,7 @@ public class OrderItemDTO {
     private Double price;
     private Integer quantity;
     private Double subtotal;
+    private String imgUrl;
 
     public OrderItemDTO(){}
 
@@ -17,6 +17,7 @@ public class OrderItemDTO {
         name = orderItem.getProduct().getName();
         price = orderItem.getProduct().getPrice();
         quantity = orderItem.getQuantity();
+        imgUrl = orderItem.getProduct().getImgUrl();
         subtotal = quantity * price;
 
     }
@@ -39,5 +40,9 @@ public class OrderItemDTO {
 
     public Double getPrice() {
         return price;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
     }
 }
