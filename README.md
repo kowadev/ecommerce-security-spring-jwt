@@ -34,7 +34,7 @@ Partindo de uma base com as classes e modelos de domínio já implementadas via 
 ### **Modelo Conceitual / Diagrama de Domínio**
 
 ![Diagrama do Modelo de Domínio do DS Commerce](https://github.com/gustavokowallski/DsCommerce/blob/main/images/Captura%20de%20tela%202025-06-19%20231153.png)
-*(Se você tiver outros diagramas, como de arquitetura, pode adicioná-los aqui ou em uma seção própria.)*
+
 
 ---
 
