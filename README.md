@@ -48,7 +48,7 @@ Partindo de uma base com as classes e modelos de domínio já implementadas via 
 * **Bcrypt**
 * JPA / Hibernate
 * Maven
-* Consultas SQL (e JPQL, se aplicável)
+* Consultas SQL 
 * API REST
 
 #### **Front-end**
