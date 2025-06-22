@@ -83,7 +83,7 @@ Partindo de uma base com as classes e modelos de domínio já implementadas via 
 * A API estará disponível para requisições após a execução. Você pode utilizar ferramentas como **Postman**, Insomnia ou cURL para interagir com os endpoints.
 * **Coleção Postman:** Clique no botão abaixo para importar e testar os endpoints da API diretamente no Postman:
     [![Run in Postman](https://run.pstmn.io/button.svg)](https://nawszera.postman.co/workspace/nawszera's-Workspace~ea6779bc-203d-4c77-8395-e87a3f1091fa/collection/45108000-f6768588-1047-4d8a-9f85-5a899d48076a?action=share&creator=45108000&active-environment=45108000-ee357952-f911-405a-9337-066beac8e080)
-* **(Opcional):** Se você configurou Swagger UI/OpenAPI, adicione o link aqui (ex: `http://localhost:8080/swagger-ui.html`).
+
 
 ---
 
