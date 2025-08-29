@@ -1,68 +1,96 @@
-# E-Commerce DS Commerce - Backend Seguro
+# 🛒 E-Commerce DS Commerce - Backend Seguro
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/gustavokowallski/DsCommerce/blob/main/LICENSE) 
-
----
-
-### **Sobre o Projeto DS Commerce**
-
-O **DS Commerce** é uma aplicação web Backend que simula uma loja virtual robusta. Este projeto foi originalmente desenvolvido durante a formação **Java Spring Professional** organizada pela **DevSuperior**.
-
-Ele permite a criação e gerenciamento de produtos e pedidos, o controle de categorias e a gestão de usuários com diferentes níveis de acesso. O projeto foi construído com foco em boas práticas de desenvolvimento e na utilização de tecnologias modernas de back-end.
+![Java](https://img.shields.io/badge/Java-21-blue)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.1-brightgreen)
+![Spring Security](https://img.shields.io/badge/Security-JWT%20%7C%20Bcrypt-orange)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ---
 
-### **Minha Contribuição: Implementação de Segurança da API**
-
-Partindo de uma base com as classes e modelos de domínio já implementadas via JPA, minha principal contribuição neste projeto foi a **implementação completa da segurança da API e do controle de acessos**. Isso incluiu:
-
-* **Autenticação de Usuário via API REST:**
-    * Desenvolvimento de um endpoint de login para a autenticação de usuários.
-    * Geração e validação de **JSON Web Tokens (JWT)** para gerenciar as sessões de usuário após o login bem-sucedido.
-* **Controle de Acesso Baseado em Tokens (Autorização):**
-    * Utilização dos tokens JWT para autorizar requisições subsequentes à API, garantindo a integridade e validade dos tokens.
-* **Proteção de Endpoints da API:**
-    * Definição de regras de acesso para endpoints específicos, assegurando que apenas usuários autenticados e autorizados possam acessá-los.
-    * Implementação de bloqueio automático para requisições sem tokens válidos ou com tokens expirados.
-* **Autorização por Papéis (Roles):**
-    * Criação de um sistema de autorização que controla o acesso a recursos com base nos **papéis (roles)** atribuídos aos usuários, permitindo permissões distintas para diferentes perfis (ex: administrador, cliente).
-* **Segurança no Armazenamento de Credenciais:**
-    * Configuração para o armazenamento e verificação seguros de senhas, utilizando o algoritmo de hashing **Bcrypt** para proteger as credenciais dos usuários.
+> 📢 Este projeto faz parte da formação DevSuperior e representa uma loja virtual robusta. Aqui, mostro minha habilidade em implementar segurança de ponta a ponta com Spring Security.
 
 ---
 
-### **Modelo Conceitual / Diagrama de Domínio**
+## 🔎 Sobre o Projeto
 
-![Diagrama do Modelo de Domínio do DS Commerce](https://github.com/gustavokowallski/DsCommerce/blob/main/images/Captura%20de%20tela%202025-06-19%20231153.png)
+O **DS Commerce** é uma aplicação web backend que simula uma loja virtual completa. O sistema permite criar e gerenciar produtos, pedidos e usuários com diferentes níveis de acesso.
 
-
----
-
-### **Tecnologias Utilizadas**
-
-#### **Back-end**
-* Java 21
-* Spring Boot
-* **Spring Security**
-* **JSON Web Token (JWT)**
-* **Bcrypt**
-* JPA / Hibernate
-* Maven
-* Consultas SQL 
-* API REST
-
-#### **Front-end**
-* Não utilizado neste projeto (foco exclusivo no Back-end da API).
+Foi desenvolvido com foco em boas práticas de arquitetura, segurança e organização do código, utilizando tecnologias modernas como Spring Boot, JPA e JWT.
 
 ---
 
-### **Como Executar o Projeto**
+## 🔐 Minha Entrega: Segurança Total com JWT + Roles
 
-#### **Back-end**
+Minha principal entrega neste projeto foi a **implementação completa da segurança da API**, incluindo:
 
-**Pré-requisitos:**
-* Java Development Kit (JDK) **21+** instalado.
-* Maven (já vem integrado com o wrapper `./mvnw`).
+- **Autenticação via API REST**
+  - Endpoint de login
+  - Geração e validação de **JWTs** (JSON Web Tokens)
+
+- **Autorização baseada em tokens**
+  - Proteção de endpoints privados
+  - Validação automática de token expirado
+
+- **Controle de acesso por perfis**
+  - Perfis distintos (`admin`, `cliente`)
+  - Controle refinado de permissões
+
+- **Proteção de rotas**
+  - Bloqueio de acesso para usuários não autenticados
+  - Regras baseadas no perfil de usuário
+
+- **Segurança de senhas**
+  - Armazenamento com **BCrypt**
+
+---
+
+## 🧠 Conquistas Técnicas
+
+- 🔐 Segurança robusta com Spring Security
+- 🎯 Controle de acesso via JWT + roles
+- 🧪 Testes práticos com Postman
+- 🧼 Código limpo e organizado
+
+---
+
+## 🧱 Modelo Conceitual
+
+![Diagrama do Modelo de Domínio](https://github.com/gustavokowallski/DsCommerce/blob/main/images/Captura%20de%20tela%202025-06-19%20231153.png)
+
+---
+
+## 🧰 Tecnologias Utilizadas
+
+- Java 21  
+- Spring Boot  
+- Spring Security  
+- JWT  
+- Bcrypt  
+- Spring Data JPA / Hibernate  
+- Maven  
+- API REST  
+- PostgreSQL  
+- Consultas SQL
+
+---
+
+## ⚙️ Como Executar o Projeto
+
+### Pré-requisitos
+
+- JDK 21+
+- Maven instalado (ou use `./mvnw`)
+
+### Passos
+
+```bash
+# Clone o repositório
+git clone https://github.com/gustavokowallski/DsCommerce.git
+cd DsCommerce
+```
+# Execute o projeto
+./mvnw spring-boot:run
 
 **Passos:**
 1.  **Clonar o repositório:**
