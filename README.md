@@ -1,56 +1,52 @@
-# 🛒 E-Commerce DS Commerce - Backend Seguro
+# DsCommerce 
 
 ![Java](https://img.shields.io/badge/Java-21-blue)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.1-brightgreen)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.4-brightgreen)
 ![Spring Security](https://img.shields.io/badge/Security-JWT%20%7C%20Bcrypt-orange)
 ![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ---
 
-> 📢 Este projeto faz parte da formação DevSuperior e representa uma loja virtual robusta. Aqui, mostro minha habilidade em implementar segurança de ponta a ponta com Spring Security.
+
+> 🚀 Projeto da formação DevSuperior com foco em segurança web real, autenticação JWT, controle de acesso por perfis e proteção de endpoints. Aqui demonstro minha capacidade de construir APIs REST seguras, robustas e escaláveis.
 
 ---
 
-## 🔎 Sobre o Projeto
+## 📌 Visão Geral
 
-O **DS Commerce** é uma aplicação web backend que simula uma loja virtual completa. O sistema permite criar e gerenciar produtos, pedidos e usuários com diferentes níveis de acesso.
-
-Foi desenvolvido com foco em boas práticas de arquitetura, segurança e organização do código, utilizando tecnologias modernas como Spring Boot, JPA e JWT.
+O **DS Commerce** simula uma loja virtual completa com usuários, produtos e pedidos. A principal entrega é o sistema de segurança robusto, com autenticação e autorização baseadas em JWT e roles, proteção de rotas, e armazenamento seguro de senhas.
 
 ---
 
-## 🔐 Minha Entrega: Segurança Total com JWT + Roles
+## 🔐 Principais Funcionalidades de Segurança
 
-Minha principal entrega neste projeto foi a **implementação completa da segurança da API**, incluindo:
-
-- **Autenticação via API REST**
-  - Endpoint de login
-  - Geração e validação de **JWTs** (JSON Web Tokens)
-
-- **Autorização baseada em tokens**
-  - Proteção de endpoints privados
-  - Validação automática de token expirado
-
-- **Controle de acesso por perfis**
-  - Perfis distintos (`admin`, `cliente`)
-  - Controle refinado de permissões
-
-- **Proteção de rotas**
-  - Bloqueio de acesso para usuários não autenticados
-  - Regras baseadas no perfil de usuário
-
-- **Segurança de senhas**
-  - Armazenamento com **BCrypt**
+- 🔒 Autenticação via login e geração de **JWT**
+- ✅ Proteção de rotas privadas com autorização baseada em token
+- 🛂 Controle de acesso por perfis (`ADMIN`, `CLIENT`)
+- ⛔ Bloqueio de endpoints para usuários não autorizados
+- 🔁 Validação automática de expiração de token
+- 🧊 Senhas criptografadas com **BCrypt**
 
 ---
 
-## 🧠 Conquistas Técnicas
+## 🧠 Regras de Negócio Aplicadas
 
-- 🔐 Segurança robusta com Spring Security
-- 🎯 Controle de acesso via JWT + roles
-- 🧪 Testes práticos com Postman
-- 🧼 Código limpo e organizado
+- Apenas usuários autenticados podem acessar endpoints protegidos
+- Endpoints administrativos são acessíveis somente com perfil `ADMIN`
+- Clientes comuns têm acesso restrito às funcionalidades permitidas
+- Senhas nunca são expostas (armazenamento seguro com hash)
+- JWTs possuem tempo de expiração e são validados a cada requisição
+
+---
+## 📚 Aprendizados Técnicos
+
+- Como estruturar autenticação JWT na prática
+- Implementação de **Spring Security** com roles e authorities
+- Criação de filtros de autenticação e autorização personalizados
+- Controle detalhado de perfis e permissões
+- Boas práticas de segurança em APIs REST
+- Organização do projeto com separação clara entre camadas (config, auth, domain, controller, etc.)
 
 ---
 
@@ -68,10 +64,7 @@ Minha principal entrega neste projeto foi a **implementação completa da segura
 - JWT  
 - Bcrypt  
 - Spring Data JPA / Hibernate  
-- Maven  
-- API REST  
 - PostgreSQL  
-- Consultas SQL
 
 ---
 
@@ -82,15 +75,6 @@ Minha principal entrega neste projeto foi a **implementação completa da segura
 - JDK 21+
 - Maven instalado (ou use `./mvnw`)
 
-### Passos
-
-```bash
-# Clone o repositório
-git clone https://github.com/gustavokowallski/DsCommerce.git
-cd DsCommerce
-```
-# Execute o projeto
-./mvnw spring-boot:run
 
 **Passos:**
 1.  **Clonar o repositório:**
